@@ -1,0 +1,66 @@
+<section>
+  <div class="form-container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" required>
+      <em class="error" *ngIf="registerForm.invalid && registerForm.untouched"
+        >All fields are required</em
+      >
+      <em
+        class="success"
+        *ngIf="registerForm.valid && success && registerForm.pristine"
+        >{{ messageSubmit }}</em
+      >
+      <em
+        class="error"
+        *ngIf="registerForm.valid && !success && registerForm.pristine"
+        >{{ messageSubmit }}</em
+      >
+      <div>
+        <label for="email"></label>
+        <em class="error" *ngIf="email.invalid && email.touched">{{
+          errorEmailMessage()
+        }}</em>
+        <input
+          formControlName="email"
+          id="email"
+          type="email"
+          placeholder="Enter Your Email"
+          required
+        />
+      </div>
+      <div>
+        <em class="error" *ngIf="password.invalid && password.touched">{{
+          passwordErrorMessage()
+        }}</em>
+        <label for="password"></label>
+        <input
+          formControlName="password"
+          id="password"
+          type="password"
+          placeholder="Enter Your Password"
+          required
+        />
+      </div>
+      <div>
+        <em
+          class="error"
+          *ngIf="
+            (registerForm.errors?.noMatch || passwordConfirm.invalid) &&
+            passwordConfirm.touched
+          "
+          >{{ confirmErrorMessage() }}</em
+        >
+        <label for="passwordConfirm"></label>
+        <input
+          formControlName="passwordConfirm"
+          id="passwordConfirm"
+          type="password"
+          placeholder="Confirm Your Password"
+          required
+        />
+      </div>
+      <button [disabled]="registerForm.invalid" type="submit" class="button">
+        Register
+      </button>
+    </form>
+  </div>
+</section>

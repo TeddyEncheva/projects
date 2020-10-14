@@ -1,0 +1,135 @@
+/* HEADER */
+header .container{
+    background-color: var(--button-blue);
+    display: flex;
+    position: relative;
+}
+
+header li{
+    list-style:none;
+  }
+
+.toggle-menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.logo{
+    font-weight: 600;
+    color: var(--white);
+    padding:10px;
+    display: flex; 
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;   
+}
+
+
+.logo::after {
+    content: "TODO APP";
+    font-size: 26px;
+    margin-left: 20px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.nav-container{
+    display:flex;
+    justify-content: flex-start;
+    padding:15px 0px;
+}
+
+.header-menu ul{
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
+}
+
+.header-menu ul > li:last-child{
+ position: absolute;
+ right:20px;
+}
+
+.header-menu li{
+    padding: 5px 10px;
+    font-size: 22px;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .header-menu li:hover,
+.header-menu li:focus,
+.header-menu  li:active{
+    text-decoration:underline;
+    text-underline-position: under;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px){
+
+  .logo::after{
+    font-size: 20px;
+  }
+
+  .header-menu li{
+    font-size: 22px;
+  }
+
+}
+@media only screen and (max-width: 768px){
+  .nav-container{
+    padding:20px 0px;
+  }
+
+  @media only screen and (max-width: 480px){
+
+  header .container {
+    flex-wrap: wrap;
+  }
+
+ label.toggle-menu-btn {
+    display:block;
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top:10%;
+  }
+
+  .nav-container{
+    display: none;
+    flex: 0 0 100%;
+    padding:0px 0px;
+  }
+  
+
+   input[type=checkbox]:checked + .nav-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background: white;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .header-menu ul > li:last-child{
+    position: relative;
+    right:0px
+  }
+  .header-menu{
+    padding:0px;
+  }
+  .toggle-menu-btn:checked + .nav-container li {
+    display: block;
+    border-bottom:1px solid #C6C6C6;
+    min-width:100%;
+    padding: 20px 15px;
+    font-size: 16px;
+    text-align: left;
+    color:black;
+    z-index: 1;
+  }
+}  
+}

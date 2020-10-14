@@ -1,0 +1,93 @@
+#projectParent{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 211px;
+}
+#projectParent h3{
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+#projectParent p{
+    line-height: 150%;
+    font-size: 16px;
+}
+.project-parent-data{
+    max-width: 700px;
+}
+
+.task-container{
+    display: flex;
+    flex-direction: column;
+    padding:14px 20px;
+}
+
+.section{
+    max-width: 1111px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 20px 20px;
+}
+
+.task-data{
+    display:flex;
+    font-size:22px;
+}
+.task-container .title{
+    display: flex;
+    align-content: center;
+    margin-bottom: 15px;
+}
+.task-container .button-container{
+    max-width: 70px;
+}
+
+.task-description{
+    font-size: 16px;
+    max-width: 700px;
+    line-height: 150%;
+}
+.state-holder{
+    position: relative;
+}
+
+.state{
+    width: 89px;
+    height: 100%;
+    margin-left: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.task-heading{
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.state p{
+    font-size: 14px;
+    color: var(--white);
+}
+
+/* MEDIA QUERIES AFFECTING TASKS AND WORKLOG */
+@media only screen and (max-width: 1280px){
+    .section{
+        margin: 0px 10px 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .state p{
+        display: none;
+    }
+    .state{
+        width: 24px;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    #projectParent{
+        height: 140px;
+    }
+}

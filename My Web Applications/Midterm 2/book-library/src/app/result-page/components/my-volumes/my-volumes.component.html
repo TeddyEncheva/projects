@@ -1,0 +1,90 @@
+<section>
+  <div class="heading">
+    <h1>MY VOLUMES</h1>
+  </div>
+  <div class="result-container">
+    <div class="top-button">
+    <app-edit-button
+      [createNew]="true"
+      class="button-absolute"
+      [localId]="localId"
+      (volumeForEdit)="this.volumeForEdit = $event"
+    >
+    </app-edit-button>
+    
+    </div>
+    <div class="list-container" *ngIf="myVolumes">
+      <div class="volume-container" *ngFor="let volume of myVolumes">
+        <div *ngIf="volume.volumeInfo?.imageLinks?.thumbnail">
+          <img
+            class="volume-image"
+            src="{{ volume.volumeInfo?.imageLinks?.thumbnail }}"
+          />
+        </div>
+        <div *ngIf="!volume.volumeInfo?.imageLinks?.thumbnail">
+          <img
+            class="volume-image"
+            src="./assets/images/BookCoverMissing.svg"
+          />
+        </div>
+        <div class="info">
+          <div class="button-row">
+            <app-delete-button
+              [myVolumes]="myVolumes"
+              [myVolumeId]="volume.id"
+              [localId]="localId"
+              (myVolumesUpdated)="this.myVolumes = $event"
+            ></app-delete-button>
+            <app-edit-button
+              [volume]="volume"
+              [myVolumeId]="volume.id"
+              [localId]="localId"
+              (volumeForEdit)="this.volumeForEdit = $event"
+            >
+            </app-edit-button>
+          </div>
+          <h2
+            *ngIf="volume?.volumeInfo?.title"
+            title="{{ volume?.volumeInfo?.title }}"
+          >
+            {{ volume.volumeInfo?.title | truncate: 40 }}
+          </h2>
+          <div *ngIf="volume.volumeInfo?.authors">
+            <p>
+              Authors:
+              {{ volume.volumeInfo.authors | commaList | truncate: 40 }}
+            </p>
+          </div>
+          <div *ngIf="!volume.volumeInfo?.authors">
+            <p>Authors: N/A</p>
+          </div>
+          <div *ngIf="volume.volumeInfo?.publisher">
+            <p>
+              Publisher:
+              {{ volume.volumeInfo?.publisher }}
+            </p>
+          </div>
+          <div *ngIf="volume?.volumeInfo?.publishedDate">
+            <p>
+              Date: {{ volume.volumeInfo?.publishedDate | date: 'dd/MM/yyyy' }}
+            </p>
+          </div>
+          <div *ngIf="volume.volumeInfo?.pageCount">
+            <p>
+              Pages:
+              {{ volume.volumeInfo?.pageCount }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <app-edit-form
+        *ngIf="formState"
+        [myVolumes]="myVolumes"
+        (myVolumesUpdated)="this.myVolumes = $event"
+        [myVolume]="volumeForEdit"
+        [localId]="localId"
+        [ngClass]="{ 'toggle-visibility': !formState }"
+      ></app-edit-form>
+    </div>
+  </div>
+</section>

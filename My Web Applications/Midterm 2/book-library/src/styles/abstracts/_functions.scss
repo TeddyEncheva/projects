@@ -1,0 +1,39 @@
+// Theme Related Functions
+
+//Primary Colors
+@function theme-color($key: 'primary', $variant: 'base') {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
+
+// State Colors
+@function state-color($key: 'success', $variant: 'foreground') {
+  $map: map-get($state-colors, $key);
+  @return map-get($map, $variant);
+}
+
+//Contrast Colors
+@function contrast($background: 'light', $type: 'primary') {
+  $map: map-get($contrast-colors, $background);
+  @return map-get($map, $type);
+}
+
+@mixin contrast($background: 'light', $type: 'primary') {
+  color: contrast($background, $type);
+}
+
+
+// Typography
+
+@function text-scale($level) {
+  @return map-get(map-get($text-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+  @return map-get(map-get($text-settings, $level), 'line-height');
+}
+
+@mixin text-setting($level) {
+  font-size: text-scale($level);
+  line-height: line-height($level);
+}

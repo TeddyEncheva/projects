@@ -1,0 +1,27 @@
+<header>
+  <div class="navigation-container">
+    <a [routerLink]="['/search']" class="logo">
+      <img src="../../../../assets/images/logo.svg" />
+    </a>
+
+    <button class="toggle-menu-btn">
+      <img src="../../../../assets/images/Icon - Menu - Rounded.svg" />
+    </button>
+    <nav class="header-menu">
+      <ul>
+        <li>
+          <a [routerLink]="['/search']">Home</a>
+        </li>
+        <li [routerLink]="['/volumes/my-volumes']" *ngIf="loggedUser">
+          <a>My Volumes</a>
+        </li>
+        <li class="right" *ngIf="!loggedUser">
+          <a [routerLink]="['auth/login']">Sign In</a>
+        </li>
+        <li class="right" *ngIf="loggedUser">
+          <a (click)="signOut()">Sign Out</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

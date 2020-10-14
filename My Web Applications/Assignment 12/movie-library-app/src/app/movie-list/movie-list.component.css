@@ -1,0 +1,10 @@
+.main-container {
+  margin-bottom: 100px;
+}
+
+.pagination-holder {
+  display: flex;
+  position: fixed;
+  top: 90%;
+  padding: 10px;
+}

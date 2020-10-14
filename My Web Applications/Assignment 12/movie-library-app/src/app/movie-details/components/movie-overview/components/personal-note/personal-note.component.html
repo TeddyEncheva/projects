@@ -1,0 +1,17 @@
+<div class="form-container" *ngIf="localId">   
+  <form #noteForm="ngForm" (ngSubmit)="onSubmit()">
+    <em class="success" *ngIf="noteForm.submitted">{{ success }}</em>
+    <div class="personal-note">
+      <label for="personalNote">Personal Note</label>
+      <textarea
+        [(ngModel)]="personalNote"
+        name="personalNote"
+        id="personalNote"
+        rows="12"
+        cols="40"
+        >{{ personalNote }}</textarea
+      >
+    </div>
+    <button type="submit" class="button">Save Note</button>
+  </form>
+</div>

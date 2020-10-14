@@ -1,0 +1,17 @@
+.cast-container {
+  border-radius: 12px;
+  display: flex;
+  margin: 10px 10px;
+  max-width: 400px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.heading h2 {
+  font-size: 40px;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}

@@ -1,0 +1,13 @@
+@import './reset.css';
+@import './palette.css';
+@import './default.css';
+@import './general.css';
+@import './modal.css';
+@import './login.css';
+@import './navigation.css';
+@import './projects.css';
+@import './tables.css';
+@import './form.css';
+@import'./tasks.css';
+@import './worklog.css';
+@import './delete.css';

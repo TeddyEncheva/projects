@@ -1,0 +1,67 @@
+.like-button {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.808);
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0px 0px 10px 2px rgba(44, 42, 42, 0.719);
+  cursor: pointer;
+}
+
+.heart {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  position: absolute;
+  top: 14px;
+  left: 12px;
+}
+
+input[type="checkbox"]{
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked+.heart {
+  animation-name: like;
+  animation-duration: 1.5s;
+  transition: 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  stroke: rgb(236, 87, 87);
+  fill: rgb(236, 87, 87);
+}
+
+@keyframes like {
+  from {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+input[type="checkbox"]:not(:checked)+.heart {
+  fill: rgb(151, 144, 144);
+  stroke: rgb(151, 144, 144);
+  opacity: 70%;
+  transition: 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation-name: removeLike;
+  animation-duration: 1.0s;
+}
+
+@keyframes removeLike {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

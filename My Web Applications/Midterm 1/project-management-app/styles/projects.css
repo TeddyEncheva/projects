@@ -1,0 +1,148 @@
+
+/* Main Contianers */
+#dashboard{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+}
+
+#projectList{
+    display: flex;
+    width:100%;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+/* Dashboard */
+.dashboard-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: center; 
+    margin: 20px;
+    max-width:460px;
+    padding:15px;
+    flex: 1 1 300px;
+    height:120px;
+}
+
+.dashboard-box img{
+    margin-left: 20px;
+}
+
+.dashboard-box h2{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 150%;
+}
+
+.dashboard-box p{
+    font-size:22px;
+    line-height: 150%;
+}
+
+.dashboard-stat{
+    margin-left:30px;
+}
+
+/* Project Section */
+.project-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 480px;
+    min-width: 280px;
+    flex: 1 1 10%;
+    margin: 20px;
+    height: 315px;
+    margin-bottom: 40px;
+}
+
+.gap-filler{
+    height: 20px;
+}
+
+.project-container h2{
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.project-container p{
+    font-size: 16px;
+    margin-top: 30px;
+    line-height: 150%;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1280px){
+    .section-wrapper{
+        margin-bottom: 10px;
+    }
+
+    .dashboard-box{
+        margin:10px;
+    }
+
+    .heading h2{
+        font-size: 24px;
+    }
+
+    .project-container{
+        flex-shrink:1 ;
+        margin:10px;
+        height: 190px;
+    }
+
+    .gap-filler{
+        height: 10px;
+    }
+
+    .page-container{
+        padding:10px;
+    }
+
+    .dashboard-stat{
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    .margin{
+        margin:10px;
+    }
+
+    .left-margin{
+        margin-left:10px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .project-container{
+        width:312px;
+        height: 312px;  
+    }
+
+    .gap-filler{
+        height: 10px;
+    }
+    
+    .project-container p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .button{
+        max-width:161px;
+        padding:0px;
+    }
+
+    .heading h2{
+        font-size: 22px;
+    }
+
+    .heading{
+        height: 30px;
+    }
+}

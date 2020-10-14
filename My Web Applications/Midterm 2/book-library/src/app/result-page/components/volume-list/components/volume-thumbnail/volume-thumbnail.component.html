@@ -1,0 +1,37 @@
+<div
+  class="volume-container"
+  *ngIf="myVolumeIds !== undefined"
+  (click)="redirectToDetails()"
+>
+  <div *ngIf="volume.volumeInfo?.imageLinks?.smallThumbnail">
+    <img
+      class="volume-image"
+      src="{{ volume.volumeInfo?.imageLinks?.thumbnail }}"
+    />
+  </div>
+  <div *ngIf="!volume.volumeInfo?.imageLinks?.thumbnail">
+    <img  class="volume-image" src="./assets/images/BookCoverMissing.svg"/>
+  </div>
+  <div class="info">
+    <div class="button-row">
+      <app-add-button
+        [localId]="localId"
+        *ngIf="volume && myVolumeIds"
+        [myVolumeIds]="myVolumeIds"
+        [volume]="volume"
+      ></app-add-button>
+    </div>
+    <h2 title="{{ volume.volumeInfo?.title }}">
+      {{ volume.volumeInfo?.title | truncate: 40 }}
+    </h2>
+    <div *ngIf="volume.volumeInfo.authors">
+      <p>Authors: {{ volume.volumeInfo.authors | commaList | truncate: 40 }}</p>
+    </div>
+    <div *ngIf="!volume.volumeInfo.authors">
+      <p>Authors: N/A</p>
+    </div>
+    <div>
+      <p>Date: {{ volume.volumeInfo?.publishedDate | date: 'dd/MM/yyyy' }}</p>
+    </div>
+  </div>
+</div>

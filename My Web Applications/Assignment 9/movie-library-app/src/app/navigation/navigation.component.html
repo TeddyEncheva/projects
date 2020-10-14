@@ -1,0 +1,29 @@
+<header>
+    <div class="nav-container">
+        <a [routerLink]="['/movies']" class="logo">
+        <img src="../../assets/img/movie_filter-black-36dp.svg"/>
+        </a>
+
+        <label for="menu-btn" class="toggle-menu-btn">
+            <img src="../../assets/img/Icon - Menu - Rounded.svg">
+        </label>
+        <input  type="checkbox" name="menu-btn" id="menu-btn" class="toggle-menu-btn"/>
+
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a [routerLink]="['/movies']" class="link">Home</a>
+                </li>
+                <li>
+                    <a class="link" href="#">Menu</a>
+                </li>
+                <li>
+                    <a class="link" href="#">Menu</a>
+                </li>
+                <li>
+                    <a class="link signin" href="#">{{loggedIn(false)}}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

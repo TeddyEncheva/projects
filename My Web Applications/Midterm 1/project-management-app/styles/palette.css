@@ -1,0 +1,26 @@
+:root {
+    --primary-text: #585858;
+    --primary-text-lighter: #909090;
+    --primary-color:#47BAC1;
+    --background-color:#FFFFFF; 
+  
+    --white: #fff;
+    --black: #333;
+    --red: #F26060;
+    --yellow: #FCC100;
+    --green: #5FC27E;
+  
+
+    --nav-menu-text: #C1C5CA;
+    --nav-menu: #354052;
+    --nav-menu-selected: #2D3646;
+
+    --error: #FF6464;
+
+    --border-color:#707070;
+    --placeholder-color: #D0D0D0;
+
+    --shadow-color: #0000004D;
+    --table-row-dark: #F8F9FA;
+    --table-border: #B1B1B1;
+}

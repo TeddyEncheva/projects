@@ -1,0 +1,14 @@
+<div class="main-container" *ngIf="isFavorite !== null">
+  <section>
+    <app-movie-overview [localId]="localId" [favoriteMovie]="favoriteMovie" [movie]="movie"></app-movie-overview>
+  </section>
+  <section>
+    <app-top-cast></app-top-cast>
+  </section>
+  <section>
+    <app-top-reviews></app-top-reviews>
+  </section>
+  <section>
+    <app-movie-recommendations></app-movie-recommendations>
+  </section>
+</div>

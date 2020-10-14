@@ -1,0 +1,114 @@
+.nav-container{
+    display: flex;
+    background-image: linear-gradient(to right,  rgb(246, 152, 45) , rgb(240, 205, 51));
+    align-items: center;
+    padding:5px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    opacity: 95%;
+}
+
+.logo{
+    margin-left:20px;
+}
+
+.nav-bar ul{
+    margin-left: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    height: 100%;
+}
+
+.link:hover,
+.link:focus{
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.signin{
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.welcome{
+    margin-right: 10px;
+}
+
+.toggle-menu-btn{
+    display: none;
+}
+
+@media only screen and (max-width: 760px){
+    
+
+    label.toggle-menu-btn {
+        display:block;
+        font-size: 25px;
+        position: absolute;
+        right: 20px;
+        top:10%;
+    }
+
+    .signin{
+        position: relative;
+        right: 0;
+        bottom: 0; 
+    }
+
+    label.toggle-menu-btn {
+        display: block;
+        font-size: 25px;
+    }
+    
+    .nav-bar {
+        display: none;
+        flex: 0 0 100%;
+    }
+    
+    input[type='checkbox']:checked + .nav-bar {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        background-image: linear-gradient(to right, rgb(246, 152, 45) , rgb(240, 205, 51));
+        opacity: 95%;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        box-shadow: 0 10px 13px -10px rgba(128, 128, 128, 0.712);
+        padding: 0px;
+    }
+    
+    .nav-bar ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+      
+    .toggle-menu-btn:checked + .nav-bar li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 15px 15px;
+        text-align: center;
+        width: 100%;
+        border-bottom: solid 1px white;
+    }
+}

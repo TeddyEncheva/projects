@@ -1,0 +1,12 @@
+<section>
+  <div class="main-container">
+    <div class="section-container">
+      <div class="heading">
+        <h2>All Reviews</h2>
+      </div>
+      <div *ngFor="let review of reviewPage?.results">
+        <app-review-unit [review]="review"></app-review-unit>
+      </div>
+    </div>
+  </div>
+</section>

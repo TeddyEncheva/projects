@@ -1,0 +1,13 @@
+<div *ngIf ="cast.profile_path">
+    <movie-image [index]=1 [image] = 'cast.profile_path'></movie-image>
+</div>
+<div class="details">
+    <div class="details-row">
+        <h3>Actor:</h3>
+        <p>{{cast.name}}</p>
+    </div>
+    <div class="details-row">
+        <h3>Character:</h3>
+        <p>{{cast.character}}</p>
+    </div>
+</div>

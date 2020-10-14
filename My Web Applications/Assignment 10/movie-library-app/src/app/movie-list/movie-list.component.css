@@ -1,0 +1,13 @@
+.next{
+    opacity: 90%;
+    position: fixed;
+    right: 20px;
+    top:90%;
+}
+
+.previous{
+    opacity:90%;
+    position:fixed;
+    left: 20px;
+    top: 90%;
+}

@@ -1,0 +1,16 @@
+<div class="section-container">
+    <div class="heading">
+        <h2>CAST MEMBERS</h2>
+    </div>
+    
+    <div class="cast-list">
+        <div *ngFor="let cast of casts; let i=index">
+            <div  *ngIf="i<9">
+                <cast-member class="cast-container shadow white" [cast] = "cast"></cast-member>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="casts.length>9" class="button-holder">
+        <button [routerLink]="['cast']" routerLinkActive="router-link-active" class="button">SEE FULL CAST MEMBERS</button>
+    </div>  
+</div>

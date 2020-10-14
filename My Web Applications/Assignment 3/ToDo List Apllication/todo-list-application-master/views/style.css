@@ -1,0 +1,156 @@
+#contentContianer{
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: rgb(77, 41, 41);
+    background-image: linear-gradient(to bottom right, rgba(197, 168, 89, 0.212), rgba(155, 78, 104, 0.212));
+     margin: 0 auto;
+     width: 80%;
+     height: 100%;
+}
+
+#error{
+    color:red;
+}
+
+#appTitle{
+    font-size:80px;
+    text-align: center;
+    font-weight: 800;
+    font-family: cursive;
+    background: -webkit-linear-gradient(rgba(113, 117, 46, 0.61), rgb(160, 21, 74));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#welcome-message{
+    font-size: 100px;
+    text-align: center;
+    font-weight: 600;
+    background: -webkit-linear-gradient(rgba(156, 155, 82, 0.61), rgb(160, 21, 74));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#navBar{
+    margin:3%;
+}
+
+.center-bolder{
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.list-element{
+    list-style:none;
+    display: inline-block;
+    margin-right: 5%;
+    padding:10px;
+}
+
+.menu{
+    background: -webkit-linear-gradient(rgba(219, 205, 159, 0.158), rgba(192, 110, 124, 0.993));
+    font-size: 18px;
+    padding:10px;
+    font-weight: 600;
+    color: rgb(99, 40, 58);
+    border-radius: 3px;
+    border: 1px solid brown;
+}
+
+#firstOption{
+    background-color: rgba(124, 212, 193, 0.726);
+}
+
+#shareWith {
+    color: rgb(56, 136, 136);
+    background: rgb(192, 235, 211);
+    margin-right: 50%;
+    width: 80%;
+}
+
+#content{
+    margin-top: 10%;
+}
+
+#tableContainer{
+    width:80%;
+    margin: 0 auto;
+}
+
+#tasksTable{
+    border-spacing: 0px;
+    white-space: pre-wrap;
+    clear:both;
+}
+
+#toDoListTable{
+    border-spacing: 0px;
+    white-space: pre-wrap;
+    clear:both;
+}
+
+#usersTable{
+    border-spacing: 0px;
+    white-space: pre-wrap;
+    clear:both;
+}
+
+.table-field{
+    border: 1px solid rgb(134, 107, 32);
+    font-weight: 600;
+    font-size: large;
+    padding:8px;
+    text-align: center;
+    background: -webkit-linear-gradient(rgba(169, 202, 212, 0.158), rgba(229, 210, 155, 0.774));
+} 
+
+
+#listsDetails{
+    font-weight: 600;
+    margin-bottom: 6%;
+    font-weight: 600;
+    width: 25%;
+}
+
+.cell-style, #userId{
+    border: 1px solid goldenrod;
+    background-color: rgb(236, 227, 204);
+    padding:8px;
+}
+
+
+.data-container:hover{
+    background: -webkit-linear-gradient(rgba(169, 202, 212, 0.158), rgba(229, 210, 155, 0.774)); 
+}
+
+.data-field{
+    text-align: center;
+    padding:10px;
+    border-bottom: 1px solid brown;  
+} 
+
+.edit-button, .delete-button, .newbutton, .details-button, .save-button{
+    text-align: center;
+    color: rgb(48, 0, 0);
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(192, 110, 124, 0.993);
+    border:1px solid brown;
+}
+
+.newbutton{
+    padding: 1%;
+    font-size: 16px;
+    width:10%;
+    margin-bottom: 1%;
+}
+
+.edit-button:hover, .delete-button:hover, .newbutton:hover, .details-button:hover, .menu:hover{
+    box-shadow: 0px 0px 10px 5px plum;
+}
+
+

@@ -1,0 +1,15 @@
+<section>
+  <div class="main-container">
+    <div class="section-container">
+      <div class="heading">
+        <h2>ALL CAST MEMBERS</h2>
+      </div>
+      <div *ngFor="let cast of casts" class="row">
+        <app-cast-member
+          [cast]="cast"
+          class="cast-container shadow white"
+        ></app-cast-member>
+      </div>
+    </div>
+  </div>
+</section>

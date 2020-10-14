@@ -1,0 +1,11 @@
+<section>
+  <div class= "main-container">
+    <div class="heading">
+      <h1>YOUR FAVORITE MOVIES</h1>
+    </div>
+    <app-movie-thumbnail
+      *ngFor="let movie of movies"
+      [movie]="movie"
+    ></app-movie-thumbnail>
+  </div>
+</section>

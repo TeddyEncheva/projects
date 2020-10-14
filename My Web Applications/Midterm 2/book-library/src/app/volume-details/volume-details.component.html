@@ -1,0 +1,65 @@
+<section>
+  <div class="volume-container" *ngIf="volume !== undefined">
+    <div *ngIf="volume.volumeInfo?.imageLinks?.thumbnail" class="detailes-image">
+      <img src="{{ volume.volumeInfo?.imageLinks?.thumbnail }}" />
+    </div>
+    <div class="detailes-image" *ngIf="!volume.volumeInfo?.imageLinks?.thumbnail">
+      <img src="./assets/images/BookCoverMissing.svg"/>
+    </div>
+    <div class="info">
+      <div title="{{ volume.volumeInfo?.title }}">
+        <h2>{{ volume.volumeInfo?.title }}</h2>
+      </div>
+      <div *ngIf="volume.volumeInfo.authors">
+        <h3>Authors:</h3>
+        <p>{{ volume.volumeInfo.authors | commaList }}</p>
+      </div>
+      <div *ngIf="!volume.volumeInfo.authors">
+        <h3>Authors: N/A</h3>
+      </div>
+      <div class="saleability">
+        {{ forSale() }}
+      </div>
+      <div *ngIf="volume.volumeInfo?.publisher">
+        <h3>Publisher:</h3>
+        <p>{{ volume.volumeInfo?.publisher }}</p>
+      </div>
+      <div>
+        <h3>Published Date:</h3>
+        <p>
+          {{ volume.volumeInfo?.publishedDate | date: 'dd/MM/yyyy' }}
+        </p>
+      </div>
+      <div *ngIf="volume.volumeInfo?.description">
+        <h3>Description:</h3>
+        <p>{{ volume.volumeInfo?.description | stripTag }}</p>
+      </div>
+      <div *ngIf="volume.volumeInfo.categories">
+        <h3>Categories:</h3>
+        <p>{{ volume.volumeInfo?.categories | commaList }}</p>
+      </div>
+      <div>
+        <h3>Page count:</h3>
+        <p>{{ volume.volumeInfo?.pageCount }}</p>
+      </div>
+      <div *ngIf="volume.volumeInfo.averageRating">
+        <h3>Average rating:</h3>
+        <p>{{ volume.volumeInfo.averageRating }}</p>
+      </div>
+      <button
+        *ngIf="volume.accessInfo.pdf.downloadLink"
+        (click)="download()"
+        class="button"
+      >
+        Download
+      </button>
+      <button
+        *ngIf="volume.saleInfo.buyLink"
+        (click)="download()"
+        class="button"
+      >
+        Buy
+      </button>
+    </div>
+  </div>
+</section>

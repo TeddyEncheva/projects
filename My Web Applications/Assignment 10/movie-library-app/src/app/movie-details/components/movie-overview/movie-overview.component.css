@@ -1,0 +1,10 @@
+.overview-details{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding: 10px;
+}
+
+.image-holder{
+    display: flex;
+}

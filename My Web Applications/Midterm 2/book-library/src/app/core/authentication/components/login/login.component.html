@@ -1,0 +1,43 @@
+<section>
+    <div class="form-container">
+      <div class="form-constrain">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" required>
+        <em class="error" *ngIf="loginForm.invalid && loginForm.untouched"
+          >All fields are required</em
+        >
+        <em
+          class="error"
+          *ngIf="loginForm.pristine && !isLogged && loginForm.valid"
+          >{{ formErrorMessage }}</em
+        >
+        <div>
+          <label for="email"></label>
+          <em class="error" *ngIf="email.invalid && email.touched">{{
+            errorEmailMessage()
+          }}</em>
+          <input
+            formControlName="email"
+            id="email"
+            type="email"
+            placeholder="Enter Your Email"
+            required
+          />
+        </div>
+        <div>
+          <em class="error" *ngIf="password.invalid && password.touched"
+            >Required</em
+          >
+          <label for="password"></label>
+          <input
+            formControlName="password"
+            id="password"
+            type="password"
+            placeholder="Enter Your Password"
+            required
+          />
+        </div>
+        <button type="submit" class="button">Sign In</button>
+      </form>
+    </div>
+    </div>
+</section>

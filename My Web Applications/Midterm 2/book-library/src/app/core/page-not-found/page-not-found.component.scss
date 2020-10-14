@@ -1,0 +1,25 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/functions';
+
+.not-found {
+  background-color: theme-color('background', 'light');
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+   img {
+    display: flex;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+    .not-found {
+        align-items: flex-start;
+    }
+}

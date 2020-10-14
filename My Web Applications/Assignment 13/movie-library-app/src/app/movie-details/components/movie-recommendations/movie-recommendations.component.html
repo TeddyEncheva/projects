@@ -1,0 +1,17 @@
+<div class="section-container">
+  <div class="heading">
+    <h2>Recommendations</h2>
+  </div>
+  <div class="recommended-list">
+    <app-movie-thumbnail
+      *ngFor="let movie of movies?.results"
+      [movie]="movie"
+    ></app-movie-thumbnail>
+  </div>
+  <button (click)="changePage(movies?.page + 1)" class="next button">
+    Next Page
+  </button>
+  <button (click)="changePage(movies?.page - 1)" class="previous button">
+    Previous Page
+  </button>
+</div>

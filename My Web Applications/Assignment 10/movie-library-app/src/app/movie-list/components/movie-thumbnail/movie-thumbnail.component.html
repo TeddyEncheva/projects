@@ -1,0 +1,11 @@
+<div [routerLink] = "['/movies/details', movie.id]" class="movie-container">
+    <app-movie-image [index]=3 [image]="movie?.poster_path"></app-movie-image>
+    <h2>{{movie?.title}}</h2>
+    <div class="movie-details">
+        <div>Date: {{movie?.release_date | date: 'dd/MM/yyyy'}}</div>
+        <div>Average Vote: {{movie?.vote_average / 10 | percent:'1.2-2' }}</div>
+    </div>
+    <div class="vote-bar">
+        <div class="bar-filler" [ngStyle]="{'width.%': movie.vote_average * 10 }"></div>
+    </div>
+</div>

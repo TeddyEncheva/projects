@@ -1,0 +1,56 @@
+<header>
+  <div class="nav-container">
+    <a [routerLink]="['/movies']" class="logo">
+      <img src="../../assets/img/movie_filter-black-36dp.svg" />
+    </a>
+
+    <label for="menu-btn" class="toggle-menu-btn">
+      <img src="../../assets/img/Icon - Menu - Rounded.svg" />
+    </label>
+    <input
+      type="checkbox"
+      name="menu-btn"
+      id="menu-btn"
+      class="toggle-menu-btn"
+    />
+
+    <nav class="nav-bar">
+      <ul>
+        <li>
+          <a [routerLink]="['/movies']" class="link">Home</a>
+        </li>
+        <li *ngIf="loggedUser" class="link">
+          <a
+            [routerLink]="['movies/favorites']"
+            routerLinkActive="router-link-active"
+            class="link"
+            href="#"
+            >Favorites</a
+          >
+        </li>
+        <li *ngIf="!loggedUser">
+          <a
+            [routerLink]="['/register']"
+            routerLinkActive="router-link-active"
+            class="link register"
+            href="#"
+            >Register</a
+          >
+        </li>
+        <li *ngIf="!loggedUser">
+          <a
+            [routerLink]="['/login']"
+            routerLinkActive="router-link-active"
+            class="link signin"
+            href="#"
+            >Sign In</a
+          >
+        </li>
+        <li *ngIf="loggedUser" class="signin">
+          <span class="welcome">Welcome, {{ loggedUser.email }}!</span>
+          <a (click)="signOut()" class="link" href="#">Sign Out</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

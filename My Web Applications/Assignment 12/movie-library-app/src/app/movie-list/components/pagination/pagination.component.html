@@ -1,0 +1,44 @@
+<div class="pagination-container">
+  <button
+    [routerLink]
+    [queryParams]="{ page: currentPage - 1 }"
+    [disabled]="currentPage === 1"
+    class="previous button"
+  >
+    Previous Page
+  </button>
+  <button
+    [routerLink]
+    [queryParams]="{ page: 1 }"
+    [disabled]="currentPage === 1"
+    class="button"
+  >
+    First Page
+  </button>
+  <ul *ngFor="let page of pages" class="pagination">
+    <li>
+      <a
+        [routerLink]
+        [queryParams]="{ page: page }"
+        [ngClass]="{ active: page === currentPage }"
+        >{{ page }}</a
+      >
+    </li>
+  </ul>
+  <button
+    [routerLink]
+    [queryParams]="{ page: lastPage }"
+    [disabled]="currentPage === lastPage"
+    class="button"
+  >
+    Last Page
+  </button>
+  <button
+    [routerLink]
+    [queryParams]="{ page: currentPage + 1 }"
+    [disabled]="currentPage === lastPage"
+    class="next button"
+  >
+    Next Page
+  </button>
+</div>

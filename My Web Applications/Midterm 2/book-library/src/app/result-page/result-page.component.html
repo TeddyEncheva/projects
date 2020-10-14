@@ -1,0 +1,15 @@
+<section>
+  <div class="search-container">
+    <app-search-form></app-search-form>
+  </div>
+</section>
+<section>
+  <div>
+    <h2 class="search-results">Results for: "{{ param }}"</h2>
+    <app-volume-list
+      class="result-contianer"
+      *ngIf="resultPage !== undefined"
+      [resultPage]="resultPage.items"
+    ></app-volume-list>
+  </div>
+</section>

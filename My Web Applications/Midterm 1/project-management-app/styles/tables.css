@@ -1,0 +1,93 @@
+.user-page{
+    display: flex;
+    flex-direction: column;
+}
+
+#newUser .button{
+    width:270px;
+}
+
+.table-holder{
+    display:flex;
+    max-width: 1113px;
+    flex: 1 1 300px;
+    flex-direction:column;
+    justify-content: space-evenly;
+    overflow-x:auto;
+    margin-left: 20px;
+}
+
+.table-container{
+    border-spacing: 0;
+}
+
+.table-container tr{
+    border: 1px solid var(--border-color);
+}
+
+.table-container tr:nth-child(even){
+    background-color: var(--table-row-dark);
+}
+
+.table-container tr td:last-child{
+    width: auto;
+}
+
+.data-field{
+    padding:13px;
+    overflow-x:auto;
+    width: 28%;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.table-field{
+    padding:15px; 
+    font-size: 18px; 
+    border-bottom:2px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.button-list{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+/* QUERIES */
+
+@media only screen and (max-width: 1280px){
+    .table-holder{
+        max-width: 980px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+    .data-field, .table-field {
+        padding: 12px;
+        max-width: 78px;
+    }
+    .table-holder{
+        max-width: 720px;
+    }
+}
+
+
+@media only screen and (max-width: 720px){
+    .data-field, .table-field {
+        padding: 10px 5px 5px 5px;
+        max-width: 78px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+     .data-field{
+        font-size: 14px;
+        padding: 10px 5px 5px 5px;
+    }
+    .table-field{
+        font-size: 16px;
+        padding: 10px 10px 10px 10px;
+    }
+ }

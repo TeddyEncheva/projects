@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    max-width: 100%;
+    justify-items: flex-start;
+}
+
+.container img{
+    display: flex;
+    max-width: 100%;
+    width: auto;
+    min-width: 50%;
+    object-fit: contain;
+    border-radius: 10px;
+} 

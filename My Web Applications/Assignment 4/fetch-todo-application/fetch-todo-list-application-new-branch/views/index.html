@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="contentContianer">
+        <header>
+            <h1 id="appTitle">ToDo List Manager</h1>   
+        </header>
+        <div id="uiContainer">
+            <nav id="navBar">
+                    <ul>
+                        <li class='list-element'><button id="homeLink" class="menu" onclick="homeLink_Click()">Home</button></li>
+                        <li class='list-element'><button id="usersLink" class="menu" onclick="usersLink_Click()">Manage Users</button></li>
+                        <li class='list-element'><button id="toDoListLink" class="menu"  onclick="toDoListLink_Click()">ToDo Lists</button></li>
+                        <li class='list-element'><button id="loginLink" class="menu"  onclick="loginLink_Click()">Login</button></li>
+                        <li class='list-element'><button id="logoutLink" class="menu"  onclick="logoutLink_Click()">Logout</button></li>
+                    </ul>
+            </nav>
+                <div>
+                    <p id="logged"></p>
+                </div>
+                <div id="tableContainer">
+                    <div id="content"></div>
+                </div>       
+        </div>
+        <footer>
+            <div id="footerContainer">
+                <p>Made by: Teddy Encheva</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../scripts/constants.js"></script>
+    <script src="../scripts/authenticationService.js"></script>
+    <script src="../scripts/repositories/baseRepo.js"></script>
+    <script src="../scripts/repositories/userRepo.js"></script>
+    <script src="../scripts/repositories/taskRepo.js"></script>
+    <script src="../scripts/repositories/listRepo.js"></script>
+    <script src="../scripts/entities/user.js"></script>
+    <script src="../scripts/entities/todo.js"></script>
+    <script src="../scripts/entities/task.js"></script>
+    <script src="../scripts/views/homePage.js"></script>
+    <script src="../scripts/views/loginPage.js"></script>
+    <script src="../scripts/views/users/usersPage.js"></script>
+    <script src="../scripts/views/users/usersEditPage.js"></script>
+    <script src="../scripts/views/toDoLists/toDoListsPage.js"></script>
+    <script src="../scripts/views/toDoLists/toDoListNewPage.js"></script>
+    <script src="../scripts/views/toDoLists/toDoListEditPage.js"></script>
+    <script src="../scripts/views/toDoLists/toDoListDetailsPage.js"></script>
+    <script src="../scripts/views/tasks/tasksNewPage.js"></script>
+    <script src="../scripts/views/tasks/tasksEditPage.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/events.js"></script>
+    <script src="../scripts/userEvenets.js"></script>
+    <script src="../scripts/toDoEvents.js"></script>
+    <script src="../scripts/taskEvenets.js"></script>
+</body>
+
+</html>

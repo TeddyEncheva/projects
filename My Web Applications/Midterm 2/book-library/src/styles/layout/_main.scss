@@ -1,0 +1,21 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 80px;
+
+  .background-image{
+    position: fixed;
+    z-index: -1;
+    bottom: 7%;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .background-image{
+    img{
+    width: 100%;
+    }
+  }
+}

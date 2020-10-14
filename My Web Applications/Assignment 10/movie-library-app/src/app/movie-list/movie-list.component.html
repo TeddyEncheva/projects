@@ -1,0 +1,8 @@
+<div class="main-container">
+    <div class="heading" >
+        <h1>Current Popular Movies </h1>
+    </div>
+    <app-movie-thumbnail *ngFor="let movie of movies?.results" [movie]="movie"></app-movie-thumbnail>
+    <button  [routerLink] [queryParams]="{ page: currentPage -1 }"  *ngIf="currentPage>1" class="previous button">Previous Page</button>
+    <button  [routerLink] [queryParams]="{ page: currentPage +1 }"  class="next button">Next Page</button>
+</div>

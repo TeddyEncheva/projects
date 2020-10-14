@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: white;
+    color: rgb(75, 56, 66);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.heading {
+    width:100%;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    padding: 20px;
+}

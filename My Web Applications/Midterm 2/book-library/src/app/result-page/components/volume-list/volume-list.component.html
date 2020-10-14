@@ -1,0 +1,10 @@
+<div class="result-container">
+  <div *ngIf="resultPage" class="list-container">
+    <app-volume-thumbnail
+      *ngFor="let volume of resultPage"
+      (updatedVolumeIds)="this.myVolumeIds = $event"
+      [volume]="volume"
+      [myVolumeIds]="myVolumeIds"
+    ></app-volume-thumbnail>
+  </div>
+</div>

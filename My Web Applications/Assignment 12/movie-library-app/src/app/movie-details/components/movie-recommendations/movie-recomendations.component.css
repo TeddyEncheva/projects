@@ -1,0 +1,21 @@
+.next {
+  opacity: 90%;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+
+.previous {
+  opacity: 90%;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+}
+
+.recommended-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-items: center;
+  justify-content: space-evenly;
+}

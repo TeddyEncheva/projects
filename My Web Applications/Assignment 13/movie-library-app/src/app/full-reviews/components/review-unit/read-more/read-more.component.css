@@ -1,0 +1,11 @@
+.collapsed {
+  height: 150px;
+  overflow: hidden;
+}
+
+.tiny {
+  width: 100px;
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+<div class="section-container">
+    <div class="image-holder">
+        <app-movie-image  [index]=3 [image]='movie?.poster_path'></app-movie-image>
+    </div>
+    <div class="details white shadow">
+        <div class="details-row">
+            <h3>Title:</h3>
+            <p>{{movie?.title}}</p>
+        </div>
+        <div class="details-row">
+            <h3>Genres:</h3>
+            <div *ngIf = "movie?.genres.length >0">
+                <p >{{getGenres(movie?.genres)}} </p>
+            </div>
+        </div>
+        <div class="details-row">
+            <h3>Release Date:</h3> 
+            <p>{{movie?.release_date | date: 'dd/MM/yyyy'}}</p>
+        </div>
+        <div class="details-row">
+            <h3>Runtime:</h3> 
+            <p>{{movie?.runtime | timeConverter}}</p>
+        </div>
+        <div class="details-row">
+            <h3>Average Vote:</h3> 
+            <p>{{movie?.vote_average /10 |percent: "1.2-2"}}</p>
+        </div>
+        <div class="details-row">
+            <h3>Tagline:</h3>
+            <p>{{movie?.tagline}}</p>
+        </div>
+        <div class="details-row">
+            <h3>Overview:</h3>
+            <p>{{movie?.overview}}</p>
+        </div>
+    </div>
+</div>

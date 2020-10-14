@@ -1,0 +1,41 @@
+.icon-holder{
+    display: flex;
+    margin: 5px;
+  }
+  
+  .icon-button {
+    border-radius: 50%;
+    border: none;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 10px 2px hsla(320, 65%, 78%, 0.698);
+    cursor: pointer;
+  }
+  
+  .icon  {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    margin: 0 auto;
+  }
+  
+  .icon-button:focus .icon {
+    animation-name: press;
+    animation-duration: 1.5s;
+    transition: 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  
+  @keyframes press {
+    from {
+      transform: scale(0.9);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
+  

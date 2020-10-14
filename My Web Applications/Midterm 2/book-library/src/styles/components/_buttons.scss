@@ -1,0 +1,30 @@
+.button-row{
+  display: flex;
+  min-width: fit-content;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.button {
+  width: 20%;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 33px;
+  background-color: theme-color();
+  @include text-setting('md');
+  color: contrast('dark', 'secondary');
+}
+
+.top-button{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .button{
+        width: 40%;
+    }
+}

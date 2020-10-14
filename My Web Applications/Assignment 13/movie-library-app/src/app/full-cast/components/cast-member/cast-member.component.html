@@ -1,0 +1,21 @@
+<app-movie-image
+  *ngIf="cast?.profile_path"
+  [index]="1"
+  [image]="cast?.profile_path"
+></app-movie-image>
+<div class="container">
+  <img
+    *ngIf="!cast?.profile_path"
+    src="../../../../assets/img/blankProfilePicture.jpg"
+  />
+</div>
+<div class="details">
+  <div class="details-row">
+    <h3>Actor:</h3>
+    <p>{{ cast?.name }}</p>
+  </div>
+  <div class="details-row">
+    <h3>Character:</h3>
+    <p>{{ cast?.character }}</p>
+  </div>
+</div>

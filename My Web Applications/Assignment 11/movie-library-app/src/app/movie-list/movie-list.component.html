@@ -1,0 +1,18 @@
+<section>
+  <div class="main-container">
+    <div class="heading">
+      <h1>Current Popular Movies</h1>
+    </div>
+    <app-movie-thumbnail
+      *ngFor="let movie of movies?.results"
+      [movie]="movie"
+    ></app-movie-thumbnail>
+    <div class="pagination-holder">
+      <app-pagination
+        *ngIf="lastPage"
+        [currentPage]="currentPage"
+        [lastPage]="lastPage"
+      ></app-pagination>
+    </div>
+  </div>
+</section>

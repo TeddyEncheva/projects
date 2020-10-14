@@ -1,0 +1,47 @@
+.modal{
+    display: flex;
+    position:fixed;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index:1;
+    margin: 0 auto;
+    width: 100%;
+    height:100%;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    position: relative;
+}
+
+.close-icon{
+    background:url(../images/cancel-black-36dp.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right:2%;
+    top: 1%;
+    border: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    outline:none;
+}
+
+.close-icon:hover{
+    filter: invert(52%) sepia(63%) saturate(3342%) hue-rotate(326deg) brightness(113%) contrast(108%);
+}
+
+@media only screen and (max-width: 500px){
+    .modal-content{
+        max-width: 280px;
+        padding: 15px;
+        margin: 10% auto;
+    }
+}

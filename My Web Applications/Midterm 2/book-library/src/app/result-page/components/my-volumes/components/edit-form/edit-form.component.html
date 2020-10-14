@@ -1,0 +1,72 @@
+<div *ngIf="myVolumeForm" class="modal">
+  <div class="modal-content">
+    <div class="form-container">
+      <form [formGroup]="myVolumeForm">
+        <div>
+          <button class="button-small" (click)="close()">Cancel</button>
+        </div>
+        <div formGroupName="volumeInfo">
+          <div>
+            <label for="title" required>(Required)Title:</label>
+            <input
+              type="text"
+              id="title"
+              formControlName="title"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div>
+            <button class="button" (click)="addAuthor()">
+              Add Author
+            </button>
+          </div>
+          <label for="authors">Authors:</label>
+          <div formArrayName="authors">
+            <div *ngFor="let author of getControls().controls; let i = index">
+              <input
+                type="text"
+                id="authors"
+                [formControlName]="i"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="publisher">Publisher:</label>
+            <input
+              type="text"
+              id="publisher"
+              formControlName="publisher"
+              autocomplete="off"
+            />
+          </div>
+          <div class="row">
+            <div>
+              <label for="publishedDate">Published date:</label>
+              <input
+                type="date"
+                id="publishedDate"
+                formControlName="publishedDate"
+              />
+            </div>
+            <div>
+              <label for="pageCount">Pages:</label>
+              <input type="number" id="pageCount" formControlName="pageCount" />
+            </div>
+          </div>
+          <div formGroupName="imageLinks">
+            <label for="thumbnail">Image link:</label>
+            <input
+              type="text"
+              if="thumbnail"
+              formControlName="thumbnail"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <button class="button" type="submit" (click)="onSubmit()">Save</button>
+      </form>
+    </div>
+  </div>
+</div>

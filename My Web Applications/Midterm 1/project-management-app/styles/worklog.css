@@ -1,0 +1,23 @@
+.log-container{
+    padding:20px;
+}
+
+#taskInfo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 211px;
+}
+#taskInfo .task-data{
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+#taskInfo p{
+    line-height: 150%;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 414px){
+    #taskInfo{
+        height: 140px;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="section-container">
+  <div class="heading">
+    <h2>REVIEWS</h2>
+  </div>
+  <div *ngFor="let review of reviewPage?.results; let i = index">
+    <div *ngIf="i < 3">
+      <app-review-unit [review]="review"></app-review-unit>
+    </div>
+  </div>
+  <div *ngIf="reviewPage?.results?.length > 3" class="button-holder">
+    <button
+      [routerLink]="['reviews']"
+      routerLinkActive="router-link-active"
+      class="button"
+    >
+      READ ALL REVIEWS
+    </button>
+  </div>
+</div>
